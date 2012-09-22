@@ -10,7 +10,7 @@ import lab1.*;
  * 
  * Use the word "Strategy" in your strategy pattern class.
  * 
- * @author jlombardo
+ * @author Greg Bahr
  */
 public abstract class Product {
     private static final String UNDEFINED = "undefined";

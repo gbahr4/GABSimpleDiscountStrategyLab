@@ -3,7 +3,7 @@ package lab1.solution;
 
 /**
  *
- * @author Greg
+ * @author Greg Bahr
  */
 public class MediumDiscountStrategy implements DiscountStrategy {
     
@@ -12,9 +12,13 @@ public class MediumDiscountStrategy implements DiscountStrategy {
     private static final double SMALL_DISCOUNT_PRICE = .10;
     
     
-    public double calculateDiscountPrice() {
+    public void calculateDiscountPrice() {
        discountPrice = price * SMALL_DISCOUNT_PRICE;
-       return discountPrice;
+       
+    }
+
+    public double getDiscountPrice() {
+        return discountPrice;
     }
 
      

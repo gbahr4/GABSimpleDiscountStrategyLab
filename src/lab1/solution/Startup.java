@@ -5,7 +5,7 @@ import java.text.NumberFormat;
 
 /**
  *
- * @author jlombardo
+ * @author Greg Bahr
  */
 public class Startup {
     

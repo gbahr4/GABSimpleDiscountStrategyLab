@@ -4,13 +4,12 @@ import lab1.*;
 
 /**
  *
- * @author jlombardo
+ * @author Greg Bahr
  */
 public class BaseballHat extends Product {
     
-    
-    private double discountPrice;
-    
+   
+        
     public BaseballHat() {
         
     }
@@ -25,7 +24,7 @@ public class BaseballHat extends Product {
         
     }
 
-   
+    
 
     
     

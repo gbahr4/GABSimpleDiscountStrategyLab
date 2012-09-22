@@ -12,9 +12,9 @@ public class SmallDiscountStrategy implements DiscountStrategy {
     private static final double SMALL_DISCOUNT_PRICE = .10;
     
     
-    public double calculateDiscountPrice() {
+    public void calculateDiscountPrice() {
        discountPrice = price * SMALL_DISCOUNT_PRICE;
-       return discountPrice;
+      
     }
 
     public double getDiscountPrice() {

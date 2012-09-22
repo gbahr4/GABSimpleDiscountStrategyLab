@@ -3,10 +3,10 @@ package lab1.solution;
 
 /**
  *
- * @author Greg
+ * @author Greg Bahr
  */
 public interface DiscountStrategy {
     
-    public abstract double calculateDiscountPrice();
+    public abstract void calculateDiscountPrice();
     
 }

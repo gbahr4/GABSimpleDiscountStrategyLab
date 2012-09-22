@@ -7,10 +7,19 @@ import lab1.*;
  * @author jlombardo
  */
 public class Socks extends Product {
-    private DiscountStrategy discountStrategy;
-    
+
     public Socks() {
-       discountStrategy = new NoDiscountStrategy();   
+    }
+    
+        
+    public Socks(String partName, String partNumber, double price, 
+            DiscountStrategy discountStrategy) { 
+            
+        this.setPartName(partName);
+        this.setPartNumber(partNumber);
+        this.setPrice(price);
+        this.setDiscountStrategy(discountStrategy);
+        
     }
 
        

@@ -4,14 +4,22 @@ import lab1.*;
 
 /**
  *
- * @author jlombardo
+ * @author Greg Bahr
  */
 public class LeatherBelt extends Product {
-    
-    private DiscountStrategy discountStrategy;
 
     public LeatherBelt() {
-        discountStrategy = new MediumDiscountStrategy();
+    }
+    
+        
+    public LeatherBelt(String partName, String partNumber, double price, 
+            DiscountStrategy discountStrategy) { 
+            
+        this.setPartName(partName);
+        this.setPartNumber(partNumber);
+        this.setPrice(price);
+        this.setDiscountStrategy(discountStrategy);
+        
     }
 
      

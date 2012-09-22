@@ -14,7 +14,7 @@ public class NoDiscountStrategy implements DiscountStrategy {
 
     
     
-    public void setDiscountPrice() {
+    public void calculateDiscountPrice() {
        discountPrice = price;
        
     }
