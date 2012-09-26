@@ -5,6 +5,7 @@ import lab1.*;
 /**
  *
  * @author Greg Bahr
+ * @final version
  */
 public class LeatherBelt extends Product {
     

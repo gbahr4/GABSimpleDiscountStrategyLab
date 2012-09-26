@@ -7,12 +7,12 @@ package lab1.solution;
 /**
  *
  * @author Greg
+ * @final version
  */
 public class NoDiscountStrategy implements DiscountStrategy {
 
     private static final double DEFAULT_DISCOUNT = 0;    
-    
-    
+        
     public double getDiscountPrice(double price) {
        
        return price * DEFAULT_DISCOUNT;

@@ -5,6 +5,7 @@ import lab1.*;
 /**
  *
  * @author jlombardo
+ * @final version
  */
 public class Socks extends Product {
 

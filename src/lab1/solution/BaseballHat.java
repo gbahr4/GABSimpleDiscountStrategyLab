@@ -5,12 +5,15 @@ import lab1.*;
 /**
  *
  * @author Greg Bahr
+ * @final version
+ *
  */
 public class BaseballHat extends Product {
     
     
             
-    public BaseballHat(String partName, String partNumber, double price, DiscountStrategy discountStrategy) { 
+    public BaseballHat(String partName, String partNumber, double price, 
+            DiscountStrategy discountStrategy) { 
         this.setPartName(partName);
         this.setPartNumber(partNumber);
         this.setPrice(price);   

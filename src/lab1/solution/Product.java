@@ -11,10 +11,10 @@ import lab1.*;
  * Use the word "Strategy" in your strategy pattern class.
  * 
  * @author Greg Bahr
+ * @final version
  */
 public abstract class Product {
     private static final String UNDEFINED = "undefined";
-    private static final double DEFAULT_DISCOUNT = 0;
     private String partName;
     private String partNumber;
     private String description;
@@ -26,13 +26,10 @@ public abstract class Product {
         this.discountStrategy = discountStrategy;
     }
 
-    public double getDiscount(double price) {
+    public double getDiscount() {
         
-        discountStrategy.getDiscountPrice(price);
-        return price * DEFAULT_DISCOUNT;
-        
-         
-        
+        return discountStrategy.getDiscountPrice(price);
+     
     }  
 
     
