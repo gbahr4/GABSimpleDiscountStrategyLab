@@ -9,25 +9,27 @@ import java.text.NumberFormat;
  */
 public class Startup {
     
+   private static double price;
    
     public static void main(String[] args) {
         
-        BaseballHat baseballHat = new BaseballHat();
+           Product[] products = {
+            new BaseballHat("Brewers Baseball Hat", "BH100",19.95, new SmallDiscountStrategy()),
+            new LeatherBelt("Men's Leather Dress Belt", "LB201", 39.50, new MediumDiscountStrategy()),
+            new Socks("Women's Cotton Socks (Large)", "WS45", 25.88, new NoDiscountStrategy())
+                  
+        };
         
-        baseballHat.setPartName("Baseball Hat");
-        baseballHat.setPartNumber("12345");
-        baseballHat.setPrice(10.00);
-        baseballHat.setDiscountStrategy(new SmallDiscountStrategy());
-        baseballHat.performDiscount();
+        NumberFormat nf = NumberFormat.getCurrencyInstance();
         
-        
-        System.out.println(baseballHat.getPartName());        
-        System.out.println(baseballHat.getPartNumber());
-        System.out.println(baseballHat.getPrice());
-        System.out.println(baseballHat.getDiscountPrice());
-        
-        
+        for(Product p : products) {
+           
+            System.out.println(p.getPartNumber() + ", "
+                    + p.getPartName() + ", Price: "
+                    + nf.format(p.getPrice()) + ", Discount: "
+                    + nf.format(p.getDiscount(price)));
+        }
     }
-
-   
-}
+        
+}    
+    

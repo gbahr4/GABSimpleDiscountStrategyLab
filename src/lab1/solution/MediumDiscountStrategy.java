@@ -7,19 +7,16 @@ package lab1.solution;
  */
 public class MediumDiscountStrategy implements DiscountStrategy {
     
+    private static final double MEDIUM_DISCOUNT_PRICE = .10;
     private double price;
-    private double discountPrice;
-    private static final double SMALL_DISCOUNT_PRICE = .10;
     
-    
-    public void calculateDiscountPrice() {
-       discountPrice = price * SMALL_DISCOUNT_PRICE;
+    public double getDiscountPrice(double price) {
+       this.price = price;
+       return price * MEDIUM_DISCOUNT_PRICE;
        
     }
 
-    public double getDiscountPrice() {
-        return discountPrice;
-    }
+   
 
      
     

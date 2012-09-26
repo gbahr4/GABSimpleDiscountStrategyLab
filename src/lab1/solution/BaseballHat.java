@@ -8,19 +8,20 @@ import lab1.*;
  */
 public class BaseballHat extends Product {
     
-   
-        
-    public BaseballHat() {
-        
-    }
-
-    public BaseballHat(String partName, String partNumber, double price, 
-            DiscountStrategy discountStrategy) { 
+    
             
+    public BaseballHat(String partName, String partNumber, double price, DiscountStrategy discountStrategy) { 
         this.setPartName(partName);
         this.setPartNumber(partNumber);
-        this.setPrice(price);
+        this.setPrice(price);   
         this.setDiscountStrategy(discountStrategy);
+       
+    }
+
+    
+
+    
+        
         
     }
 
@@ -30,4 +31,4 @@ public class BaseballHat extends Product {
     
     
 
-}
+

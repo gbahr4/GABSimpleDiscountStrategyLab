@@ -20,24 +20,22 @@ public abstract class Product {
     private String description;
     private double price;
     private DiscountStrategy discountStrategy;
-    private double discountPrice;
-
-    public void setDiscountStrategy(DiscountStrategy discountStrategy) {
+    
+    
+    public final void setDiscountStrategy(DiscountStrategy discountStrategy) {
         this.discountStrategy = discountStrategy;
     }
 
-    public void performDiscount() {
-        discountStrategy.calculateDiscountPrice();
+    public double getDiscount(double price) {
+        
+        discountStrategy.getDiscountPrice(price);
+        return price * DEFAULT_DISCOUNT;
+        
+         
         
     }  
 
-    public double getDiscountPrice() {
-        return discountPrice;
-    }
-
-      
-      
-
+    
     public final String getPartName() {
         return partName;
     }
@@ -53,7 +51,7 @@ public abstract class Product {
         return partNumber;
     }
 
-    public void setPartNumber(final String partNumber) {
+    public final void setPartNumber(final String partNumber) {
         if(partNumber == null || partNumber.length() == 0) {
             this.partNumber = UNDEFINED;
         }
